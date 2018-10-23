@@ -1,8 +1,9 @@
-extern crate gcc;
+extern crate cc;
 extern crate regex;
 
 use std::process::Command;
 use std::env;
+use std::path::Path;
 use regex::Regex;
 
 fn main() {
@@ -115,7 +116,8 @@ fn link_library() {
         format!("build\\{}\\obj\\neon\\neon.obj", configuration)
     };
 
-    gcc::Build::new().object(object_path).compile("libneon.a");
+    let object_path = Path::new(&object_path).canonicalize().expect("neon.o was not made");
+    cc::Build::new().object(object_path).compile("libneon.a");
 }
 
 fn debug() -> bool {

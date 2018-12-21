@@ -11,14 +11,18 @@ Rust bindings for writing safe and fast native Node.js modules.
 
 # Getting started
 
-Once you have the [platform dependencies](https://guides.neon-bindings.com/getting-started/) installed, getting started is as simple as:
+Once you have the [platform dependencies](https://neon-bindings.com/docs/getting-started#install-node-build-tools/) installed, getting started is as simple as:
 
 ```
 $ npm install -g neon-cli
 $ neon new my-project
 ```
 
-See the [Getting Started guide](https://guides.neon-bindings.com/getting-started/) for details.
+Then see the [Hello World guide](https://neon-bindings.com/docs/hello-world/) for writing your first Hello World in Neon!
+
+# Docs
+
+See our [Neon fundamentals docs](https://neon-bindings.com/docs/primitives) and our [API docs](https://neon-bindings.com/api/neon/).
 
 # Platform Support
 
@@ -66,7 +70,7 @@ register_module!(mut cx, {
 })
 ```
 
-To learn more, check out the [Neon guides](https://guides.neon-bindings.com).
+For more examples, see our [examples repo](https://github.com/neon-bindings/examples).
 
 # Get Involved
 
